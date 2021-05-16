@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt update && apt upgrade -y
 apt install wget -y
 iptables -A INPUT -s 66.143.221.69,107.130.231.210 -p tcp --dport 1080 -j ACCEPT
