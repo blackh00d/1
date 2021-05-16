@@ -1,14 +1,14 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt install wget -y
-iptables -A INPUT -s 66.143.221.69,107.130.231.210 -p tcp --dport 1080 -j ACCEPT
-iptables -A INPUT -p tcp --dport 1080 -j REJECT
-echo "-----BEGIN OPENSSH PRIVATE KEY-----" > /root/.ssh/droneKey
-wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/iFYa693 -O /tmp/1
-wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/gt7BzgG -O /tmp/2
-wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/J7JcejV -O /tmp/3
-cat /tmp/1 /tmp/2 /tmp/3 >> /root/.ssh/droneKey
-echo "-----END OPENSSH PRIVATE KEY-----" >> /root/.ssh/droneKey
-chmod 400 /root/.ssh/droneKey
+apt install dante-server wget -y
+
+#echo "-----BEGIN OPENSSH PRIVATE KEY-----" > /root/.ssh/droneKey
+#wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/iFYa693 -O /tmp/1
+#wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/gt7BzgG -O /tmp/2
+#wget https://raw.githubusercontent.com/blackh00d/iVXFbRJaWVM4jdi8yGdvPZdxV/main/J7JcejV -O /tmp/3
+#cat /tmp/1 /tmp/2 /tmp/3 >> /root/.ssh/droneKey
+#echo "-----END OPENSSH PRIVATE KEY-----" >> /root/.ssh/droneKey
+#chmod 400 /root/.ssh/droneKey
+
 echo "Firewall & SSH Setup Complete"
