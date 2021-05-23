@@ -1,6 +1,9 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt install dante-server wget -y
+apt install python3-pip
+pip3 install pproxy
+pip3 install python-daemon
+pproxy -l socks4+socks5+http://:1080 --daemon
 
 echo "Setup Complete"
